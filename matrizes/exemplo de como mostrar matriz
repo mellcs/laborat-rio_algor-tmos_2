@@ -1,0 +1,10 @@
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+for line in range(len (matriz)):
+    for column in range (len(matriz[line])):
+        print(matriz[line][column], end="")
+    print(end="\n")
