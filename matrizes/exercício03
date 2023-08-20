@@ -1,0 +1,20 @@
+matriz = [
+    
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+    
+    ] 
+    
+addition = 0
+    
+for row in matriz: 
+    biggest = row[0]
+        
+    for number in row:
+        if number > biggest:
+            biggest = number
+            
+    addition += biggest    
+    
+print("The sum of all the numbers from each line is:", addition)
