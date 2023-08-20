@@ -1,0 +1,26 @@
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+total_sum = 0
+total_elements = 0
+
+for row in matriz:
+    biggest = row[0]
+    row_sum = 0
+    
+    for number in row:
+        if number > biggest:
+            biggest = number
+        row_sum += number
+        
+    total_sum += biggest
+    total_elements += len(row)
+    
+    row_average = row_sum / len(row)
+    print("Average of row:", row_average)
+
+matriz_average = total_sum / total_elements
+print("Total average of the matriz:", matriz_average)
