@@ -1,0 +1,19 @@
+def separation (og_list):
+    dup_list = []
+    uni_list = []
+    
+    for number in og_list:
+        if number in uni_list:
+            dup_list.append(number)
+            uni_list.remove(number)
+        else:
+            uni_list.append(number)
+            
+    return dup_list, uni_list
+
+
+og_list = [1,1,2,3,3,4,5,5]
+dup_list, uni_list = separation(og_list)
+
+print("Duplicated elements:", dup_list)
+print("Unified elements:", uni_list)
