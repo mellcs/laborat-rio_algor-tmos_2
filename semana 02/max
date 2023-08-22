@@ -1,3 +1,11 @@
+def sum_max_values (max_list):
+    result = 0
+    
+    for item in max_li9st:
+        result += item
+        
+    return result
+
 def calculate_max_values (matriz)=
     max_list = []
     for line in range(len(matriz)):
@@ -19,7 +27,7 @@ def main():
         ]
  
     result = calculate_max_values(matriz)
-    
+    max_sum = sum_max_values(result)
     print("Result:", result)
     
 main
