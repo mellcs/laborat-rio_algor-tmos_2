@@ -6,8 +6,10 @@ def calculate_max_values (matriz)=
         for column in range(len(matriz[line])):
             if matriz[line][column] > max_value:
                 max_value = matriz[line] [column]
-        
+
+        max_list.append(max_value)
         print("Line": line, matriz[line], max(matriz[line]))
+    return max list
 
 def main():
     matriz = [
