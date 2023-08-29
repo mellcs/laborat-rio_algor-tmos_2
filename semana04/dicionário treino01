@@ -1,0 +1,26 @@
+def data(person):
+    name = input("Digite seu nome:")
+    person["name"] = name
+    
+    age = input("Digite sua idade:")
+    person["age"] = age 
+    
+    sex = input("Digite seu sexo:")
+    person["sex"] = sex 
+    
+    city = input("Insira sua cidade:")
+    person["city"] = city
+    
+    state = input("Insira seu estado:")
+    person["state"] = state 
+    
+    return person
+    
+
+
+def main():
+    person = {}
+    result = data(person)
+    print(result)
+    
+main()
