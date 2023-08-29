@@ -1,0 +1,31 @@
+# - dicionário lista de compras. chave é o item, valor é a quatidade. 
+# - chave e valor input 
+# - imprimir tudo junto
+# - se tiver produto repetido, adicionar ao já existente.
+
+def listing (buy_list):
+    option = input("Digite 1 para adicionar um produto e 2 para sair:")
+    while option != 2:
+        product_name = input("Digite o nome do produto (ou 'sair' para sair):")
+        if product_name == "sair":
+            break
+      
+        quantity = int(input("Digite a quantidade:"))
+        
+        if product_name in buy_list:
+            buy_list[product_name] = buy_list[product_name] + quantity
+        else:
+            buy_list[product_name] = quantity
+        
+    return buy_list
+    
+
+
+def main():
+    buy_list = {}
+    
+    result = listing(buy_list)
+    
+    print(result)
+    
+main()
