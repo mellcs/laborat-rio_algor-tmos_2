@@ -1,0 +1,22 @@
+#escreva uma função que recebe uma lista de nú7meros e crie um dicionário que seja estruturado como sendo o número a chave e a quantidade de vezes que o número
+#está presente o valor. ex: [1,2,3,4,5,4,3] -> {1:1, 2:1, 3:2, 4:2, 5:1}
+
+def count_numbers(my_list):
+    count_dict = {}
+    for number in my_list:
+        #count_dict[number] = count_dict.get{number,0) + 1
+        if number in count_dict:
+            count_dict[number] += 1 
+        else: 
+            count_dict[number] = 1 
+    
+    return count_dict
+
+def main():
+    my_list = [1,2,3,4,5,4,3]
+    
+    result = count_numbers(my_list)
+    
+    print("Result -->", result)
+    
+main()
