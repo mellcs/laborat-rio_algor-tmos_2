@@ -1,0 +1,15 @@
+#Crie um dicionário vazio semana = {} e o complete com uma chave para cada dia da semana, tendo como seu valor
+#uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?). Após,
+#imprima o resultado de forma amigável.
+
+semana = {
+    "Segunda - feira" : "Competência Competitiva no Universo da Tecnologia",
+    "Terça - feira" : "Laboratório de Algorítmos II",
+    "Quarta - feira" : " ",
+    "Quinta - feira": "Probabilidade e Estatística",
+    "Sexta - feira" : "Fundamentos de Economia e Administração",
+    "Sábado - feira" : "Organização e Arquitetura de Computadores",
+    "Domingo - feira" : " "
+}
+for dia, aula in semana.items():
+    print(dia, ", a aula é de", aula)
