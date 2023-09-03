@@ -1,0 +1,10 @@
+dictionary = {
+    'Márcia' : 'Red with little bear prints',
+    'Hamilton' : 'Dark Blue',
+    'Stephanie' : 'Green paw print',
+    'Kayk' : 'Dark Red',
+    'Daniel' : 'Black'
+}
+
+for name, color in dictionary.items():
+    print(name, "está usando uma blusa que é", color)
