@@ -1,0 +1,45 @@
+1.Faça um dicionário com as 5 pessoas mais perto de você, tendo o nome como chave e a cor da camisa que está
+usando como valor. Após, imprima o resultado de forma amigável.
+
+2.Crie um dicionário vazio semana = {} e o complete com uma chave para cada dia da semana, tendo como seu valor
+uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?). Após,
+imprima o resultado de forma amigável.
+
+3.Crie um dicionário vazio filmes = {}. Utilize o nome de um filme como chave. E, como valor, outro dicionário
+contendo o vilão e o ano em que o filme foi lançado. Preencha 5 filmes e exiba de forma amigável.
+
+4.Escreva um programa em Python que verifique se uma chave existe ou não em um dicionário. Se a chave existir no
+dicionário, imprima Verdadeiro. Caso contrário, imprima Falso.
+
+5.Escreva uma função que conta a quantidade de vogais em um texto e armazena tal quantidade em um dicionário,
+onde a chave é a vogal considerada.
+
+6.Escreva um programa que lê duas notas de vários alunos e armazena tais notas em um dicionário, onde a chave é
+o nome do aluno. A entrada de dados deve terminar quando for lida uma string vazia como nome. Escreva uma
+função que retorna a média do aluno, dado seu nome.
+
+--------
+
+1. Escreva uma função que recebe uma lista de números e crie um dicionário que seja estruturado como sendo o
+número a chave e a quantidade de vezes que o número está presente o valor. Exemplo: [1, 2, 3, 4, 5, 4, 3] => { 1: 1, 2:
+1, 3: 2, 4: 2, 5: 1 }
+
+2. Crie uma função que receba uma frase e retorne em um objeto as letras com a quantidade de vezes com que ela
+está presente na frase. Exemplo: ‘Joao’ => { ‘j’: 1, ‘o’: 2, ‘a’: 1 }
+
+3. Faça um programa que leia nomes de alunos e suas respectivas notas até que o nome ’oooo’ seja informado, após
+o fim da leitura, imprima o nome do aluno que possui a maior nota. Obs.: Use dicionário para resolver essa questão.
+
+--------
+
+1. Escreva um programa para armazenar uma agenda de telefones em um dicionário. Cada pessoa pode ter um ou
+mais telefones e a chave do dicionário é o nome da pessoa. Seu programa deve ter as seguintes funções: 
+ . createContact – essa função acrescenta um novo nome na agenda, com um ou mais telefones. Ela deve receber
+como argumentos o nome e os telefones.
+ . includePhone– essa função acrescenta um telefone em um nome existente na agenda. Caso o nome não exista
+na agenda, você deve perguntar se a pessoa deseja incluí-lo. Caso a resposta seja afirmativa, use a função
+anterior para incluir o novo nome.
+ . deletePhone – essa função exclui um telefone de uma pessoa que já está na agenda. Se a pessoa tiver apenas
+um telefone, ela deve ser excluída da agenda.
+ . deleteContact – essa função exclui uma pessoa da agenda.
+ . getPhones – essa função retorna os telefones de uma pessoa na agenda.
