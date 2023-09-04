@@ -1,0 +1,24 @@
+def count(text_insert):
+    vowels = {
+        "a" : 0,
+        "e" : 0,
+        "i" : 0,
+        "o" : 0,
+        "u" : 0
+}
+
+    for character in text_insert:
+        if character.lower() in vowels:
+            vowels[character.lower()] += 1 
+    
+    return vowels
+
+def main():
+    text_insert = input("Insira seu texto:")
+    
+    result = count(text_insert)
+    
+    for vowel, counting in result.items():
+        print("A vogal", vowel, "aparece", counting, "vezes.")
+    
+main()
