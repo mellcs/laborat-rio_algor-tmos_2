@@ -1,0 +1,36 @@
+#Escreva um programa que lê duas notas de vários alunos e armazena tais notas em um dicionário, onde a chave é
+#o nome do aluno. A entrada de dados deve terminar quando for lida uma string vazia como nome. Escreva uma
+#função que retorna a média do aluno, dado seu nome.
+
+def insert():
+    
+    dicionario = {}
+    
+    opc = input("Adicionar aluno?")
+
+    while True:
+        name = input("Insira o nome do aluno ou deixe em branco para sair:")
+        if not name:
+            break 
+    
+    
+        first_grade = float(input("Insira a primeira nota:"))
+        second_grade = float(input("Insira a segunda nota:"))
+        pre_media = first_grade + second_grade
+        media = pre_media / 2
+        
+        dicionario[name] = media 
+        
+  
+    
+    return dicionario
+    
+    
+def main():
+    
+    present = insert()
+
+    for name, media in present.items():
+        print("O aluno", name, "teve média", media)
+
+main()
