@@ -1,10 +1,3 @@
-2.Crie um dicionário vazio semana = {} e o complete com uma chave para cada dia da semana, tendo como seu valor
-uma lista com as aulas que você tem nesse dia (sábado e domingo recebem listas vazias, ou você tem aula?). Após,
-imprima o resultado de forma amigável.
-
-3.Crie um dicionário vazio filmes = {}. Utilize o nome de um filme como chave. E, como valor, outro dicionário
-contendo o vilão e o ano em que o filme foi lançado. Preencha 5 filmes e exiba de forma amigável.
-
 4.Escreva um programa em Python que verifique se uma chave existe ou não em um dicionário. Se a chave existir no
 dicionário, imprima Verdadeiro. Caso contrário, imprima Falso.
 
