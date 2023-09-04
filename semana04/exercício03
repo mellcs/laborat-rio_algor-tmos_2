@@ -1,0 +1,13 @@
+#Crie um dicionário vazio filmes = {}. Utilize o nome de um filme como chave. E, como valor, outro dicionário
+#contendo o vilão e o ano em que o filme foi lançado. Preencha 5 filmes e exiba de forma amigável.
+
+filmes = {
+    "Nope" : "Audiences - 2022",
+    "Mad Max: Fury Road" : "Immortan Joe - 2015",
+    "Dune" : "Everyone except the fremen - 2021",
+    "The Little Mermaid" : "Ursula - 2023",
+    "Cocaine Bear" : "Drug Dealers - 2023"
+}
+
+for movie, villainyear in filmes.items():
+    print ("O filme", movie, "tem como vilão e foi lançado em:", villainyear)
