@@ -1,0 +1,18 @@
+def count_numbers(my_list):
+    count_dict = {}
+    for number in my_list:
+        if number in count_dict:
+            count_dict[number] += 1 
+        else: 
+            count_dict[number] = 1 
+    
+    return count_dict
+
+def main():
+    my_list = [1,2,3,4,5,4,3]
+    
+    result = count_numbers(my_list)
+
+    print("Result -->", result)
+    
+main()
