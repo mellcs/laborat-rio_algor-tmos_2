@@ -1,0 +1,28 @@
+#Escreva um programa em Python que verifique se uma chave existe ou não em um dicionário. Se a chave existir no
+#dicionário, imprima Verdadeiro. Caso contrário, imprima Falso.
+
+
+def checking(dicionario):
+    opc = input("Deseja checar ou sair?")
+    while opc != "sair":
+        item = input("Qual item deseja checar?")
+        if item in dicionario:
+            print(True)
+        else:
+            print(False)
+    
+
+def main():
+    dicionario = {
+    "amoras" : " ",
+    "laranjas" : " ",
+    "bananas" : " ",
+    "cereal" : " "
+}
+    
+    resposta = checking(dicionario)
+    
+    print(resposta)
+
+
+main()
