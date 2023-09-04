@@ -1,8 +1,3 @@
-3. Faça um programa que leia nomes de alunos e suas respectivas notas até que o nome ’oooo’ seja informado, após
-o fim da leitura, imprima o nome do aluno que possui a maior nota. Obs.: Use dicionário para resolver essa questão.
-
---------
-
 1. Escreva um programa para armazenar uma agenda de telefones em um dicionário. Cada pessoa pode ter um ou
 mais telefones e a chave do dicionário é o nome da pessoa. Seu programa deve ter as seguintes funções: 
  . createContact – essa função acrescenta um novo nome na agenda, com um ou mais telefones. Ela deve receber
