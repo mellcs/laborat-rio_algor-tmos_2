@@ -1,0 +1,27 @@
+#Faça um programa que leia nomes de alunos e suas respectivas notas até que o nome ’oooo’ seja informado, após
+#o fim da leitura, imprima o nome do aluno que possui a maior nota. 
+#Obs.: Use dicionário para resolver essa questão.
+
+def main():
+    alunos = {}
+    
+    while True:
+        name = input("Insira o nome do aluno:")
+        if name == "oooo":
+            break 
+        
+        grade_1 = float(input("Insira a primeira nota:"))
+        grade_2 = float(input("Insira a segunda nota"))
+        pre_media = grade_1 + grade_2
+        media = pre_media / 2 
+        
+        alunos[name] = media 
+        
+        if alunos:
+            aluno_com_maior_nota = max(alunos, key=alunos.get)
+            maior_nota = alunos[aluno_com_maior_nota]
+            print("O aluno com maior nota é", aluno_com_maior_nota, "com média", maior_nota)
+        else:
+            print("Nenhum aluno inserido.")
+            
+main()
