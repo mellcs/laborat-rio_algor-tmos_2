@@ -1,0 +1,22 @@
+#Crie uma função que receba uma frase e retorne em um objeto as letras com a quantidade de vezes com que ela 
+#está presente na frase. Exemplo: ‘Joao’ => { ‘j’: 1, ‘o’: 2, ‘a’: 1 }
+
+def count_letters (phrase):
+    count_dict = {}
+    
+    for letter in phrase:
+        if letter in count_dict:
+            count_dict[letter] += 1 
+        else:
+            count_dict[letter] = 1 
+    
+    return count_dict
+    
+def main():
+    phrase = input("Insira uma frase ou palavra:")
+    
+    result = count_letters(phrase)
+    
+    print("Contagem:", result)
+
+main()
