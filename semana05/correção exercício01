@@ -1,0 +1,21 @@
+def main():
+    week = {}
+    week_days = (
+        "domingo",
+        "segunda - feira",
+        "terça - feira",
+        "quarta - feira",
+        "qunta - feira",
+        "sexta - feira",
+        "sábado"
+        )
+        
+    for day in week_days:
+        class_day = input(f"Qual aula você tem no(a) {day} ?")
+        week[day] = class_day
+        print(week)
+        
+        print("\n #AULAS DA SEMANA")
+        for key in week:
+            print(f' \t> {key}: {week[key]}')
+main()
