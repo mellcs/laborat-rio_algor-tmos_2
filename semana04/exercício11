@@ -1,0 +1,83 @@
+#agenda telefônica. a chave do dicionário é o nome da pessoa e o valor é seus números de telefone.
+#funções: createContact, includePhone, deletePhone, deleteContact, getPhones
+
+phonebook = {}
+
+def createContact(name, telephones):
+    if name not in phonebook:
+        phonebook[name] = telephones
+    else:
+        print("O contato", name, "já existe na agenda.")
+
+def includePhone(name, telephone):
+    if name in phonebook:
+        phonebook[name].append(telephone)
+    else:
+        answer = input("O contato", name, "não existe na agenda. Deseja adicioná-lo? (s/n): ")
+        if answer.lower() == 's':
+            telephones = [telephone]
+            createContact(name, telephones)
+
+def deletePhone(name, telephone):
+    if name in phonebook:
+        if telephone in phonebook[name]:
+            phonebook[name].remove(telephone)
+            if not phonebook[name]:
+                deleteContact(name)
+        else:
+            print("O telefone", telephone, "não existe para o contato", name)
+    else:
+        print("O contato", name, "não existe na agenda.")
+
+def deleteContact(name):
+    if name in phonebook:
+        del phonebook[name]
+    else:
+        print("O contato", name, "não existe na agenda.")
+
+def getPhones(name):
+    if name in phonebook:
+        return phonebook[name]
+    else:
+        print("O contato", name, "não existe na agenda.")
+        return []
+
+def main():
+    while True:
+        print("Escolha uma opção:")
+        print("1 - Adicionar novo contato")
+        print("2 - Adicionar telefone a um contato")
+        print("3 - Excluir telefone de um contato")
+        print("4 - Excluir contato")
+        print("5 - Obter telefones de um contato")
+        print("6 - Sair")
+
+        opc = input("Opção: ")
+
+        if opc == '1':
+            name = input("Nome do novo contato: ")
+            telephones = input("Telefones (separados por vírgula): ").split(',')
+            createContact(name, telephones)
+        elif opc == '2':
+            name = input("Nome do contato: ")
+            telephone = input("Telefone a ser adicionado: ")
+            includePhone(name, telephone)
+        elif opc == '3':
+            name = input("Nome do contato: ")
+            telephone = input("Telefone a ser excluído: ")
+            deletePhone(name, telephone)
+        elif opc == '4':
+            name = input("Nome do contato a ser excluído: ")
+            deleteContact(name)
+        elif opc == '5':
+            name = input("Nome do contato: ")
+            telephones = getPhones(name)
+            if telephones:
+                print("Telefones de", name + ":", ', '.join(telephones))
+        elif opc == '6':
+            break
+        else:
+            print("Opção inválida.")
+
+
+main()
