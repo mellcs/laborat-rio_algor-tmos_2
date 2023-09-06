@@ -1,0 +1,7 @@
+
+deposito_modelo ={ "lampada" : {
+        "amount": "7",
+        "price" : "12,90"
+    }
+}
+print(a)
