@@ -1,3 +1,5 @@
+#não funcional
+
 def add_product(stock):
     product_name = input("Insira o nome do produto: ")
     stock_amount = int(input("Insira a quantidade de estoque: "))
@@ -19,15 +21,36 @@ def main():
     stock = {}
     
     while True:
+        print(">>>MENU<<<")
+        print("1 - Adicionar um produto.")
+        print("2 - Buscar um produto.")
+        print("3 - Visualizar todos produtos.")
+        print("4 - Vender um produto.")
+        print("5 - Relatório de vendas.")
+        print("6 - Sair")
+        
         opc = int(input("O que deseja fazer?"))
         
         if opc == 1:
             add_product(stock)
+            
+        elif opc == 2:
+            
+        elif opc == 3:
             print(stock)
+            
+        elif opc == 4:
+            
+        elif opc == 5:
+            
+        elif opc == 6:
+            print("Obrigada por usar nossos serviços!")
+            break
+        
+        else:
+            print("Opção inválida!")
     
-    
-      
     print("Estoque final:")
-    print(stock)
+   
     
 main()
