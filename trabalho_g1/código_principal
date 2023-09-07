@@ -1,0 +1,33 @@
+def add_product(stock):
+    product_name = input("Insira o nome do produto: ")
+    stock_amount = int(input("Insira a quantidade de estoque: "))
+    unitary_price = float(input("Insira o preço unitário do produto: "))
+    
+    if product_name in stock:
+        stock[product_name]["amount"] += stock_amount
+    else:
+        stock[product_name] = {
+        "amount": stock_amount,
+        "price": unitary_price
+    }
+
+   
+    
+    
+    
+def main():
+    stock = {}
+    
+    while True:
+        opc = int(input("O que deseja fazer?"))
+        
+        if opc == 1:
+            add_product(stock)
+            print(stock)
+    
+    
+      
+    print("Estoque final:")
+    print(stock)
+    
+main()
