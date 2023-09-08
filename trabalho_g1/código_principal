@@ -18,6 +18,22 @@ def search_for_product(stock):
     else:
         print("Produto não disponível no estoque.")
 
+def sell_product(stock):
+    product_name = input("Insira o nome do produto desejado:")
+    
+    if product_name in stock: 
+        desired_amount = int(input("Insira a quantidade desejada do produto:"))
+        product_info = stock[product_name]
+        if product_info["amount"] >= desired_amount:
+            product_info["amount"] -= desired_amount
+            total_value = product_info["price"] * desired_amount
+            print("Valor total da venda:", total_value)
+            
+        else:
+            print("A quantidade de produto desejado não está disponível no momento.")
+    else:
+        print("Produto não disponível no estoque.")
+    
     
 def main():
     stock = {}
@@ -31,7 +47,7 @@ def main():
         print("5 - Relatório de vendas.")
         print("6 - Sair")
         
-        opc = int(input("O que deseja fazer?"))
+        opc = int(input("O que deseja fazer? "))
         
         if opc == 1:
             add_product(stock)
@@ -41,6 +57,9 @@ def main():
             
         elif opc == 3:
             print(stock)
+        
+        elif opc == 4:
+            sell_product(stock)
             
         elif opc == 6:
             print("Obrigada por usar nossos serviços!")
@@ -50,6 +69,7 @@ def main():
             print("Opção inválida!")
     
     print("Estoque final:")
+    print(stock)
    
     
 main()
