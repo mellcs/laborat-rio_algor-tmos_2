@@ -13,7 +13,7 @@ def menu():
     return option
     
 def add_product(stock):
-    
+
     name_product= input("Digite o nome do produto: ")
     amount = int(input("Digite a quantidade: "))
     price = float(input("Digite o preço: "))
@@ -39,6 +39,15 @@ def find_product(stock):
         print(f"{product} não encontrado no estoque.")
         
     print()
+
+def show_product(stock):
+
+    print("\tProdutos diponíveis em estoque:")
+            
+    for product, details in stock.items():
+        print(f"Produto: {product}")
+        print(f"Quantidade: {details['amount']}")
+        print(f"Preço: ${details['price']:.2f}\n")
  
 def sell_product(stock, sales):
     
@@ -103,12 +112,7 @@ def main():
             find_product(stock)
             
         elif option == 3:
-            print("\tProdutos diponíveis em estoque:")
-            
-            for product, details in stock.items():
-                print(f"Produto: {product}")
-                print(f"Quantidade: {details['amount']}")
-                print(f"Preço: ${details['price']:.2f}\n")
+            show_product(stock)
                 
         elif option == 4:
             sell_product(stock, sales)
