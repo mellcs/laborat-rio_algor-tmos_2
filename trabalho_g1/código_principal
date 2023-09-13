@@ -37,7 +37,9 @@ def sell_product(stock, record):
         print("Produto não disponível no estoque.")
 
 def sales_report(record):
-    a
+        for i in len(record):
+        print(i)
+        ### CORRIJA VAGAB A
     
     
 def main():
