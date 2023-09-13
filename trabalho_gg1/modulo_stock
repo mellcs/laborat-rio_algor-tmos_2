@@ -3,6 +3,7 @@ def add_product(stock):
     name_product= input("Digite o nome do produto: ")
     amount = int(input("Digite a quantidade: "))
     price = float(input("Digite o preço: "))
+    category = input("Insira a categoria do produto: ")
     
     if name_product in stock:
         stock[name_product]["amount"] += amount
