@@ -51,7 +51,18 @@ def alter_price(stock):
     print()
 
 def remove_product(stock):
-    a
+    def remove_product(stock):
+    
+    product_name = input("Insira o nome do produto que deseja deletar: ")
+    
+    if product_name in stock:
+        stock.pop(product_name)
+        
+    else:
+        print("Produto não disponível no estoque.")
+    
+    print()
+    
 
 def alter_report():
     a
