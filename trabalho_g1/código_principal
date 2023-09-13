@@ -18,7 +18,7 @@ def search_for_product(stock):
     else:
         print("Produto não disponível no estoque.")
 
-def sell_product(stock):
+def sell_product(stock, record):
     product_name = input("Insira o nome do produto desejado:")
     
     if product_name in stock: 
@@ -28,19 +28,22 @@ def sell_product(stock):
             product_info["amount"] -= desired_amount
             total_value = product_info["price"] * desired_amount
             print("Valor total da venda:", total_value)
+
+            record.append (f"{desired_amount} unidades do produto {product_name} foram vendidas pelo valor de {total_value} ")
             
         else:
             print("A quantidade de produto desejado não está disponível no momento.")
     else:
         print("Produto não disponível no estoque.")
 
-def sales_report(stock):
+def sales_report(record):
     a
     
     
 def main():
     stock = {}
-    
+    record = []
+
     while True:
         print(">>>MENU<<<")
         print("1 - Adicionar um produto.")
