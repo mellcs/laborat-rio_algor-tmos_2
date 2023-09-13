@@ -37,7 +37,18 @@ def show_product(stock):
         print(f"Preço: ${details['price']:.2f}\n")
 
 def alter_price(stock):
-    a
+
+    def alter_price(stock):
+    
+    product_name = input("Insira o nome do produto: ")
+    new_price = float(input("Insira o novo preço do produto: "))
+    
+    if product_name in stock:
+        stock[product_name]["price"] = new_price
+    else:
+        print("Produto não disponível no estoque.")
+        
+    print()
 
 def remove_product(stock):
     a
