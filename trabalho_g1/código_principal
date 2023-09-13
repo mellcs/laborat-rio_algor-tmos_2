@@ -33,6 +33,9 @@ def sell_product(stock):
             print("A quantidade de produto desejado não está disponível no momento.")
     else:
         print("Produto não disponível no estoque.")
+
+def sales_report(stock):
+    a
     
     
 def main():
