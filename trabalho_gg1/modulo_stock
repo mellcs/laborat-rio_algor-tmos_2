@@ -35,3 +35,12 @@ def show_product(stock):
         print(f"Produto: {product}")
         print(f"Quantidade: {details['amount']}")
         print(f"Preço: ${details['price']:.2f}\n")
+
+def alter_price(stock):
+    a
+
+def remove_product(stock):
+    a
+
+def alter_report():
+    a
