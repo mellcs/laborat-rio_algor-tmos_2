@@ -1,4 +1,19 @@
+def show_menu():
+
+  print("\t Menu Principal") 
+  print("1 - Adicionar um produto.")
+  print("2 - Buscar um produto.")
+  print("3 - Visualizar todos os produtos.")
+  print("4 - Vender um produto.")
+  print("5 - Relatório de vendas.")
+  print("6 - Sair.")
+
+  option = int(input("\n Digite a opção que deseja executar: "))
+
+  return option
+
 def add_product(stock):
+    
     product_name = input("Insira o nome do produto: ")
     stock_amount = int(input("Insira a quantidade de estoque: "))
     unitary_price = float(input("Insira o preço unitário do produto: "))
@@ -12,6 +27,7 @@ def add_product(stock):
     }
 
 def search_for_product(stock):
+    
     product_name = input("Insira o nome do produto desejado: ")
     if product_name in stock:
         print(stock[product_name])
@@ -19,6 +35,7 @@ def search_for_product(stock):
         print("Produto não disponível no estoque.")
 
 def sell_product(stock, record):
+    
     product_name = input("Insira o nome do produto desejado: ")
     
     if product_name in stock: 
@@ -37,40 +54,35 @@ def sell_product(stock, record):
         print("Produto não disponível no estoque.")
 
 def sales_report(record):
-        for sale in record:
-            print(sale)
+    
+    for sale in record:
+        print(sale)
     
 def main():
-    stock = {}
-    record = []
-
+    
+    stock = {"Caneta BIC" : {"amount" : 5, "price" : 5.00, "price_historic" : [7, 7.50], "category" : "Material Escolar",}}
+    sales = {}
+    option = 0
+    
     while True:
-        print(">>>MENU<<<")
-        print("1 - Adicionar um produto.")
-        print("2 - Buscar um produto.")
-        print("3 - Visualizar todos produtos.")
-        print("4 - Vender um produto.")
-        print("5 - Relatório de vendas.")
-        print("6 - Sair")
+        option == show_menu()
         
-        opc = int(input("O que deseja fazer? "))
-        
-        if opc == 1:
+        if option == 1:
             add_product(stock)
             
-        elif opc == 2:
+        elif option == 2:
             search_for_product(stock)
             
-        elif opc == 3:
+        elif option == 3:
             print(stock)
         
-        elif opc == 4:
+        elif option == 4:
             sell_product(stock, record)
         
-        elif opc == 5:
+        elif option == 5:
             sales_report(record)
             
-        elif opc == 6:
+        elif option == 6:
             print("Obrigada por usar nossos serviços!")
             break
         
