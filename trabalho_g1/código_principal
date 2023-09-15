@@ -12,17 +12,17 @@ def add_product(stock):
     }
 
 def search_for_product(stock):
-    product_name = input("Insira o nome do produto desejado:")
+    product_name = input("Insira o nome do produto desejado: ")
     if product_name in stock:
         print(stock[product_name])
     else:
         print("Produto não disponível no estoque.")
 
 def sell_product(stock, record):
-    product_name = input("Insira o nome do produto desejado:")
+    product_name = input("Insira o nome do produto desejado: ")
     
     if product_name in stock: 
-        desired_amount = int(input("Insira a quantidade desejada do produto:"))
+        desired_amount = int(input("Insira a quantidade desejada do produto: "))
         product_info = stock[product_name]
         if product_info["amount"] >= desired_amount:
             product_info["amount"] -= desired_amount
@@ -37,10 +37,8 @@ def sell_product(stock, record):
         print("Produto não disponível no estoque.")
 
 def sales_report(record):
-        for i in len(record):
-        print(i)
-        ### CORRIJA VAGAB A
-    
+        for sale in record:
+            print(sale)
     
 def main():
     stock = {}
@@ -67,7 +65,10 @@ def main():
             print(stock)
         
         elif opc == 4:
-            sell_product(stock)
+            sell_product(stock, record)
+        
+        elif opc == 5:
+            sales_report(record)
             
         elif opc == 6:
             print("Obrigada por usar nossos serviços!")
