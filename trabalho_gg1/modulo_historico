@@ -1,1 +1,5 @@
-a
+def sales_report(record):
+        for sale in record:
+            print(sale)
+
+
