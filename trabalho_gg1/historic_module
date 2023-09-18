@@ -1,12 +1,14 @@
 def sales_report(sales_record):
-    
+    """ O registro de vendas de todos os produtos, e também registros individuais de cada produto disponível. """
+
     for product_name, sales in sales_record.items():
         print(f"Histórico de vendas para o produto '{product_name}':")
         for sale in sales:
             print(sale)
 
 def alter_report(add_alter_record, value_alter_record, removal_record):
-    
+    """ A função em questão possui três opções dentro dela, que possibilitam checar as adições de produtos no estoque, atualizações de preços de produtos e exclusões de produtos. É possível fazer múltiplas checagens nessa função. """
+
     option = 0
 
     while option != 4:
