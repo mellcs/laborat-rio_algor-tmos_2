@@ -5,7 +5,7 @@ import sales_module
 
 
 def main():
-    
+    """ Os módulos são importados, listas e dicionários são abertos e funções são chamadas. """
     stock_data = {"caneta BIC": {"amount": 5, "price": 5.00, "price_historic": [7, 7.50], "category": "Material Escolar"}}
     sales_record = {}
     add_alter_record = []
