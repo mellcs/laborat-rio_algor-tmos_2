@@ -1,5 +1,3 @@
-descrição detalhada do código: 
-
 Temos o código principal, e quatro módulos que compõem o programa de estoque de uma loja.
 
 O primeiro módulo é o menu_module, que servirá para mostrar ao usuário todas as funcionalidades disponíveis do programa. São 10 opções diferentes, sendo a úlitma delas um "botão de sair".
