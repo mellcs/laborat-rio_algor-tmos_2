@@ -1,4 +1,6 @@
 def add_product(stock_data, add_alter_record):
+    """ Adiciona produtos ao estoque, possibilitando o cadastro do produto incluindo quantidade, preço unitário e categoria. A função checa a existência prévia do produto e atualiza a quantidade disponível no estoque, além de registrar os dados iniciais do produto."""
+
     product_name = input("Insira o nome do produto: ").capitalize()
     stock_amount = int(input("Insira a quantidade de estoque: "))
     unitary_price = float(input("Insira o preço unitário do produto: "))
@@ -16,6 +18,8 @@ def add_product(stock_data, add_alter_record):
     add_alter_record.append(f"{product_name} foi adicionado ao estoque. {stock_amount} unidades estão disponíveis, e cada unidade custa {unitary_price}. A categoria do produto é {product_category}.")
         
 def search_for_product(stock_data, sales_record):
+    """ Possibilita a pesquisa por um produto específico, exibindo em seguida toda a informação disponível previamente disponibilizada e o histórico de venda do produto em questão."""
+
     product_name = input("Insira o nome do produto desejado: ").capitalize()
 
     if product_name in stock_data:
@@ -37,6 +41,8 @@ def search_for_product(stock_data, sales_record):
 
 
 def search_product_by_category(stock_data):
+    """ Permite que o usuário procure por uma categoria específica e que veja todos os produtos inseridos nela, incluindo seus atributos. """
+
     category_search = input("Que categoria de produtos gostaria de ver? ").strip()
 
     found_products = []
@@ -57,6 +63,7 @@ def search_product_by_category(stock_data):
 
 
 def show_products(stock_data):
+    """ Mostra todos os produtos disponíveis no estoque, incluindo seus atributos. """
 
     print("\tProdutos diponíveis em estoque:")
             
@@ -67,13 +74,13 @@ def show_products(stock_data):
         print(f"Categoria: {details.get('category', 'Categoria não definida')}")
 
 def alter_price(stock_data, value_alter_record):
+   """ Permite que o usuário ajuste o preço de um produto, e registra as mudanças em um local separado. O preço novo é utilizado em novas vendas. """
+
     product_name = input("Insira o nome do produto: ").capitalize()
 
-    
     if product_name in stock_data:
         new_price = float(input("Insira o novo preço do produto: "))
 
-        
         old_price = stock_data[product_name]["price"]
 
         stock_data[product_name]["price"] = new_price
@@ -85,6 +92,7 @@ def alter_price(stock_data, value_alter_record):
         print("Produto não disponível no estoque.")
 
 def remove_product(stock_data, removal_product):
+    """ Dá ao usuário a opção de remover um produto do estoque por completo, e registra as remoções em um local separado. """
     
     product_name = input("Insira o nome do produto que deseja deletar: ").capitalize()
     
