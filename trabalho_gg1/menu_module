@@ -1,5 +1,5 @@
 def show_menu():
-
+  """ Mostra todas as funcionalidades do programa e permite o acesso aos módulos e funções. """
   print("\t Menu Principal") 
   print("1 - Adicionar um produto.")
   print("2 - Alterar o valor de um produto.")
