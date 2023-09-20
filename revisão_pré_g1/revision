@@ -1,0 +1,68 @@
+> listas:
+como se cria uma lista
+como se acessa o valor de uma lista
+como percorrer uma lista
+no for para percorrer, como posso usar (range, percorrer a lista em si for item in lista, enumerate; qual a diferença entre eles) (for in lista...)
+como acrescentar um item em uma lista
+como remover o item de uma lista
+como atribuir valor ao item de uma lista
+                                                                                                                                   
+exemplo 1: 
+lista = [5,7,3,4,2]
+for a in range(len(lista)):
+    for b in range(len(lista)):
+        if lista[a] < lista[b]:
+            x = lista[b]
+            y = lista[a]
+            
+            lista[a] = x
+            lista[b] = y
+
+print (lista)
+
+exemplo 2:
+my_list = [5,4,7,2,3,0,1,6,9,8]
+
+for index in range(len(my_list)):
+    for index_one in range(len(my_list)):
+        
+        if (index_one + 1) < len(my_list) and my_list[index_one] > my_list[index_one + 1]:
+            tmp = my_list[index_one] 
+            my_list[index_one] = my_list[index_one + 1]
+            my_list[index_one + 1] = tmp 
+            
+print(my_list)                                                                                                                                   
+                                                                                                                                   
+> matriz:
+
+exemplo 1:
+matriz = [
+    [5, 9, 0],
+    [4, 3, 7],
+    [1, 2, 6]
+]
+
+for line in range(len(matriz)):
+    for column in range(len(matriz)):
+        for another_run_line in range(len(matriz)):
+            for another_run_column in range(len(matriz)):
+                if matriz[line][column] < matriz[another_run_line][another_run_column]:
+                    tmp = matriz[line][column] 
+                    tmp2 = matriz[another_run_line][another_run_column]
+                    
+                    matriz[line][column] = tmp2
+                    matriz[another_run_line][another_run_column] = tmp
+                
+print(matriz)
+                                                                                                                                   
+
+> dicionário:
+semana que vem 
+                                                                                                                                   
+                                                                                                                                   
+> modularização:
+teoria only                                                                                                                                   
+
+> sobre a prova:                                                                                                                                   
+uma parte teórica (termos, métodos)     
+parte prática (encontre o menor número de uma lista)                                                                                                                                  
