@@ -1,10 +1,12 @@
 def add_product(stock_data, add_alter_record):
     """ Adiciona produtos ao estoque, possibilitando o cadastro do produto incluindo quantidade, preço unitário e categoria. A função checa a existência prévia do produto e atualiza a quantidade disponível no estoque, além de registrar os dados iniciais do produto."""
 
-    product_name = input("Insira o nome do produto: ").capitalize()
+    product_name = input("Insira o nome do produto: ")
+    product_name = product_name.capitalize()
     stock_amount = int(input("Insira a quantidade de estoque: "))
     unitary_price = float(input("Insira o preço unitário do produto: "))
     product_category = input("Insira a categoria do produto: ").capitalize()
+    product_category = product_category.capitalize()
 
     if product_name in stock_data:
         stock_data[product_name]["amount"] += stock_amount
@@ -20,7 +22,8 @@ def add_product(stock_data, add_alter_record):
 def search_for_product(stock_data, sales_record):
     """ Possibilita a pesquisa por um produto específico, exibindo em seguida toda a informação disponível previamente disponibilizada e o histórico de venda do produto em questão."""
 
-    product_name = input("Insira o nome do produto desejado: ").capitalize()
+    product_name = input("Insira o nome do produto desejado: ")
+    product_name = product_name.capitalize()
 
     if product_name in stock_data:
         product_info = stock_data[product_name]
@@ -76,7 +79,9 @@ def show_products(stock_data):
 def alter_price(stock_data, value_alter_record):
    """ Permite que o usuário ajuste o preço de um produto, e registra as mudanças em um local separado. O preço novo é utilizado em novas vendas. """
 
-    product_name = input("Insira o nome do produto: ").capitalize()
+    product_name = input("Insira o nome do produto: ")
+    product_name = product_name.capitalize()
+
 
     if product_name in stock_data:
         new_price = float(input("Insira o novo preço do produto: "))
@@ -94,7 +99,9 @@ def alter_price(stock_data, value_alter_record):
 def remove_product(stock_data, removal_product):
     """ Dá ao usuário a opção de remover um produto do estoque por completo, e registra as remoções em um local separado. """
     
-    product_name = input("Insira o nome do produto que deseja deletar: ").capitalize()
+    product_name = input("Insira o nome do produto que deseja deletar: ")
+    product_name = product_name.capitalize()
+
     
     if product_name in stock_data:
         stock_data.pop(product_name)
