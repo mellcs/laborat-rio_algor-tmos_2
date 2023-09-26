@@ -5,7 +5,7 @@ def add_product(stock_data, add_alter_record):
     product_name = product_name.capitalize()
     stock_amount = int(input("Insira a quantidade de estoque: "))
     unitary_price = float(input("Insira o preço unitário do produto: "))
-    product_category = input("Insira a categoria do produto: ").capitalize()
+    product_category = input("Insira a categoria do produto: ")
     product_category = product_category.capitalize()
 
     if product_name in stock_data:
