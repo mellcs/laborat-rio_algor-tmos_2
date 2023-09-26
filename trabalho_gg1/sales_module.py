@@ -3,7 +3,8 @@ from datetime import datetime
 def sell_product(stock_data, sales_record):
     """ Permite a venda de um produto, fazendo a verificação de quantidade previamente no estoque, o cálculo do total da compra, envia as informações da venda para um local separado e registra a data e a hora da mesma. Ela também mantém o usuário ciente da falta de produtos ou quantidade de produtos no estoque. """
 
-    product_name = input("Insira o nome do produto desejado: ").capitalize()
+    product_name = input("Insira o nome do produto desejado: ")
+    product_name = product_name.capitalize()
 
     if product_name in stock_data:
         desired_amount = int(input("Insira a quantidade desejada do produto: "))
