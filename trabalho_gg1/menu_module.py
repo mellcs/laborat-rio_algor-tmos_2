@@ -12,6 +12,6 @@ def show_menu():
   print("9 - Relatório de vendas.")
   print("10 - Sair.")
 
-  option = int(input("\n Digite a opção que deseja executar: "))
+  option = input("\n Digite a opção que deseja executar: ")
 
   return option
