@@ -1,40 +1,79 @@
-class InvalidOption(BaseException):
-   """Exception created to prevent the user from choosing an option that doesn't exist."""
-   pass 
+class ContaBancaria:
+    def depositar(conta, valor):
+        try:
+            valor = float(valor)
+            if valor > 0:
+                conta['saldo'] += valor
+                conta['movimentacoes'].append(f'Depósito: +{valor}')
+                print(f'Depósito de {valor} realizado com sucesso.')
+            else:
+                raise ValueError('Valor do depósito deve ser positivo.')
+        except ValueError as e:
+            print(f"Erro: {e}. Por favor, insira um valor numérico válido.")
 
-def Menu():
-    """Regular menu, with three exceptions to prevent errors."""
-    print("MENU")
-    print("1 - Depositar dinheiro.")
-    print("2 - Sacar dinheiro.")
-    print("3 - Verificar saldo bancário.")
-    print("4 - Histórico de movimentações.")
-    print("5 - Sair.")
-    
-    try:
-        option = int(input("O que você gostaria de fazer?"))
-        
-        if option <1 or option >5:
-            raise InvalidOption
-        
-        return option
-        
-    except ValueError:
-        print("Insira um número inteiro disponível no menu.")
-    except InvalidOption:
-        print("Insira uma opção disponível no menu.")
-    except BaseException as error:
-        print(f"Erro! {error}.")
-  
-def Deposit_Money():
-    """Function created to deposit money on the bank"""
+    def sacar(conta, valor):
+        try:
+            valor = float(valor)  
+            if valor > 0 and valor <= conta['transaction_limit'] and valor <= conta['saldo']:
+                conta['saldo'] -= valor
+                conta['movimentacoes'].append(f'Saque: -{valor}')
+                print(f'Saque de {valor} realizado com sucesso.')
+            else:
+                raise ValueError('Saque inválido. Verifique o valor ou seu limite.')
+        except ValueError as e:
+            print(f"Erro: {e}. Por favor, insira um valor numérico válido.")
+        except ZeroDivisionError:
+            print("Erro: Divisão por zero.")
+        except IndexError:
+            print("Erro: Índice inválido.")
+        except KeyError:
+            print("Erro: Chave inexistente no dicionário.")
+
+    def verificar_saldo(conta):
+        print(f'Saldo atual: {conta["saldo"]}')
+
+    def historico_movimentacoes(conta):
+        print('Histórico de movimentações:')
+        for movimentacao in conta['movimentacoes']:
+            print(movimentacao)
 
 def main():
-    """Main that calls the other funtions and treats a few errors"""
+    conta = {'saldo': 0, 'movimentacoes': [], 'transaction_limit': 10000}
+    
     while True:
-        menu()
-        
-        if option == 1:
+        print("\nEscolha uma opção:")
+        print("1 - Depositar dinheiro")
+        print("2 - Sacar dinheiro")
+        print("3 - Verificar saldo bancário")
+        print("4 - Histórico de movimentações")
+        print("5 - Sair")
+    
+        try:
+            opcao = int(input("Digite o número da opção desejada: "))
+    
+            if opcao == 1:
+                valor = input("Digite o valor a ser depositado: ")
+                ContaBancaria.depositar(conta, valor)
+            elif opcao == 2:
+                valor = input("Digite o valor a ser sacado: ")
+                ContaBancaria.sacar(conta, valor)
+            elif opcao == 3:
+                ContaBancaria.verificar_saldo(conta)
+            elif opcao == 4:
+                ContaBancaria.historico_movimentacoes(conta)
+            elif opcao == 5:
+                print("Saindo do sistema. Até logo!")
+                break
+            else:
+                raise ValueError("Opção inválida. Tente novamente.")
+        except ValueError as e:
+            print(e)
+        except BaseError as error:
+            print("Erro!")
+
+main()
+
+
             
     
     
