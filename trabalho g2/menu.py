@@ -1,33 +1,32 @@
-def menus():
-    while True:
-        print(">>>>MENU<<<<")
-        print("1 - Jogar.")
-        print("2 - Redefinir palavras.")
-        print("3 - Resetar o jogo.")
-        print("4 - Sair.")
-        print("5 - Ver palavras adivinhadas.")
+def menu(message):
 
-        try:
-            option = int(input("O que você gostaria de fazer? "))
-        except ValueError:
-            print("Erro! Insira um número.")
-            continue
+    try:
 
-        if option == 1:
-            return option
-        
-        elif option == 2:
-            print("hehe")
+        print(message)
+        print('>>> MENU DO JOGO TERMO <<<')
+        print('1 - Jogar')
+        print('2 - Resetar palavras já utilizadas')
+        print('3 - Sair')
+        print()
 
-        elif option == 3:
-            print("jamais")
+        option = int(input("Selecione uma opção: "))
 
-        elif option == 4:
-            print("Obrigada por jogar!")
-            exit()
+        assert option == 1 or option == 2 or option == 3, 'Você deve selecionar uma opção válida!'
 
-        elif option == 5:
-            return option
-        
-        else:
-            print("Opção inválida. Escolha novamente.")
+        return option
+    
+    except AssertionError:
+        option = menu('Erro! Você deve selecionar uma opção válida!')
+        return option
+    
+    except TypeError:
+        option = menu('Erro! Você deve selecionar uma opção válida!')
+        return option
+    
+    except ValueError:
+        option = menu('Erro! Você deve selecionar uma opção válida!')
+        return option
+    
+    except BaseException as error:
+        option = menu(f'Erro! {error}')
+        return option
