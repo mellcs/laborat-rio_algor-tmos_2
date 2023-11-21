@@ -5,7 +5,7 @@
 <h1 align="center">Requisitos do Sistema</h1>
 
 <p align="center">
-| Criação de um arquivo contendo todas as possibilidades de palavras a serem utilizadas no jogo.
+| Criação de um arquivo contendo todas as possibilidades de palavras a serem utilizadas no jogo.<br>
 | As palavras sorteadas devem possuir 5 letras.
 | Elaboração de um arquivo com registro das palavras já utilizadas, garantindo que uma palavra não seja sorteada mais de uma vez.
 | Utilização de listas, exceções, modularização e manipulação de arquivos no desenvolvimento do sistema.
