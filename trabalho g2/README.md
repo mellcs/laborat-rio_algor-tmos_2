@@ -24,3 +24,9 @@
 | O arquivo verification_and_input, que permite ao usuário inserir sua tentativa, sorteia e verifica a palavra secreta e verifica se o usuário não inseriu espaços ou números na tentativa.<br>
 | O arquivo words.txt que segura as palavras que podem ser sorteadas.<br>
 | O arquivo used_words.txt que armazena as palavras já acertadas pelo usuário.<br>
+
+<h1 align="center">Desenvolvido por:</h1>
+<p align="center">Mell Santos de Campos</p>
+<p align="center">Eduarda Cardoso</p>
+
+
