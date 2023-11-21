@@ -16,12 +16,11 @@
 | Desenvolvimento de uma interface amigável.</p>
 
 <h1 align="center">Arquitetura do Sistema</h1>
-| Arquivo main, que puxa as outras funções e módulos para o programa funcionar.<br>
+
+<p align="center">| Arquivo main, que puxa as outras funções e módulos para o programa funcionar.<br>
 | O módulo coloring, que coloca a cor nas letras e verifica se estão certas ou erradas.<br>
 | O módulo gameplay, que implementa as validações de palavras e letras, as cores e o limite de checagem de tentativas, bem como se o usuário ganhou ou não.<br>
 | O menu configura as opções disponíveis para o usuário e trata as exceções possíveis.<br>
-| O arquivo *verification_and_input*, que permite ao usuário inserir sua tentativa, sorteia e verifica a palavra secreta e verifica se o usuário não inseriu espaços ou números na tentativa.<br>
-| O sistema não deve aceitar palavras com números, espaços em branco ou mais de 5 letras.<br>
-| Funcionalidade que permita ao usuário redefinir as palavras já usadas no jogo.<br>
-| Garantia de que uma palavra não possa ser digitada duas vezes durante uma mesma partida.<br>
-| Desenvolvimento de uma interface amigável.</p>
+| O arquivo verification_and_input, que permite ao usuário inserir sua tentativa, sorteia e verifica a palavra secreta e verifica se o usuário não inseriu espaços ou números na tentativa.<br>
+| O arquivo words.txt que segura as palavras que podem ser sorteadas.<br>
+| O arquivo used_words.txt que armazena as palavras já acertadas pelo usuário.<br>
