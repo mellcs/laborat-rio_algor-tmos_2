@@ -1,26 +1,21 @@
-from menu import menus
-import working_code
+import menu
+import gameplay
 
 def main():
-    
+
     while True:
-        option = menus()
-        
-        if option == 1:
-            secret_word = working_code.get_secret_word()
-            guess_counter = 5
-            working_code.start(secret_word, guess_counter)
 
-        elif option == 2:
-            print("indos")
+        for _ in range(1):
+            opc = menu.menu('')
 
-        elif option == 3:
-            print("hoho")
-        
-        elif option == 4:
-            print("hoo")
-        
-        elif option == 5:
-            working_code.register_guessed_words()
-    
+            if opc == 1:
+                gameplay.play()
+
+            elif opc == 2:
+                file = open('used_words.txt', 'w')
+                file.close()
+
+            elif opc == 3:
+                break
+
 main()
